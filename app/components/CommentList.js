@@ -1,10 +1,10 @@
 import React from 'react'
 class CommentList extends React.Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className="list-group">
-                <div className="list-group-item">张三:你好</div>
-                <div className="list-group-item">李四:你也好</div>
+                <Comment author="张三" date="10分前">你好</Comment>
+                <Comment author="李四" date="5分前">你也好啊</Comment>
             </div>
         )
     }
