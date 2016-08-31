@@ -11,6 +11,10 @@ class CommentBox extends React.Component {
         this.getComments();
     }
 
+    handleCommentSubmit(comment) {
+        this.setState({comments: this.state.comments.concat(comment)});
+    }
+
     getComments() {
         $.ajax({
             url: this.props.url,
@@ -35,7 +39,8 @@ class CommentBox extends React.Component {
                     <CommentList data={this.state.comments}/>
                 </div>
                 <div className="col-xs-12">
-                    <CommentForm/>
+                    <CommentForm handleCommentSubmit=
+                                     {this.handleCommentSubmit.bind(this)}/>
                 </div>
             </div>
         )
