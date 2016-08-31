@@ -12,7 +12,7 @@ class CommentBox extends React.Component {
                     <div class="page-header">
                         <h1>评论</h1>
                     </div>
-                    <CommentList/>
+                    <CommentList data={this.props.data}/>
                 </div>
                 <div className="col-xs-12">
                     <CommentForm/>
